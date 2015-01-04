@@ -1,0 +1,24 @@
+{
+  "name": "toolbarFix",
+  "version": "0.0.1",
+  "description": "you can fix the div in anywhere",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangyiming/toolbarFix.git"
+  },
+  "author": "yangyiming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangyiming/toolbarFix/issues"
+  },
+  "homepage": "https://github.com/yangyiming/toolbarFix.git",
+  "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-uglify":"~0.5.1",
+        "grunt-contrib-concat":"~0.5.0"
+    }
+}
