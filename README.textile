@@ -4,6 +4,7 @@ you can fix the div in anywhere
 
 h2. how to use?
 toolbarfix depends on jQuery. Include them both in end of your HTML code:
+
 <pre>
     <script type="text/javascript" src="../dist/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../dist/toolbarFix.min.js"></script>
@@ -12,19 +13,22 @@ toolbarfix depends on jQuery. Include them both in end of your HTML code:
 h2. html code:
 
 <pre>
+	//this is tool bar
 	<div id="sector" class="selctor" style="position:fixed">
 		<a href=""></a>
 		<a href=""></a>
 		<a href=""></a>
 		<a href=""></a>
 	</div>
+
+	//Anchor point corresponding positioning module
 	<div class="section">111</div>
 	<div class="section">222</div>
 	<div class="section">333</div>
 	<div class="section">444</div>
 </pre>
 
-h2.js init:
+js init:
 
 
 <pre>
