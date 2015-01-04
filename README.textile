@@ -11,7 +11,7 @@ toolbarfix depends on jQuery. Include them both in end of your HTML code:
     <script type="text/javascript" src="../dist/toolbarFix.min.js"></script>
 </pre>
 
-h2. html code:
+html code:
 
 <pre>
 	//this is tool bar
@@ -30,7 +30,6 @@ h2. html code:
 </pre>
 
 js init:
-
 
 <pre>
 $("#toolbar").fixed({
