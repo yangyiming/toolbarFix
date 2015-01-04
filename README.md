@@ -1,14 +1,14 @@
-h1. toolbarFix
+# toolbarFix
 
 you can fix the div in anywhere
 
-h2. how to use?
+## how to use?
 toolbarfix depends on jQuery. Include them both in end of your HTML code:
 <pre>
     <script type="text/javascript" src="../dist/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../dist/toolbarFix.min.js"></script>
 </pre>
-html code:
+## html code:
 <pre>
 	<div id="sector" class="selctor" style="position:fixed">
 		<a href=""></a>
@@ -21,7 +21,7 @@ html code:
 	<div class="section">333</div>
 	<div class="section">444</div>
 </pre>
-js init:
+## js init:
 <pre>
 $("#sector").fixed({
     position:444,//Offset value to the scroll bar to scroll to what position
