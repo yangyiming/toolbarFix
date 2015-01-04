@@ -3,6 +3,7 @@ h1. toolbarFix
 you can fix the div in anywhere
 
 h2. how to use?
+
 toolbarfix depends on jQuery. Include them both in end of your HTML code:
 
 <pre>
