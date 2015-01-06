@@ -15,9 +15,9 @@
     "test",
     "tests",
      "src",
-      "dist",
       "example",
       "Gruntfile.js",
+      "README.textile",
       "package.json"
   ],
   "dependencies": {
