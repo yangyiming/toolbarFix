@@ -1,0 +1,27 @@
+{
+  "name": "toolbarFix",
+  "version": "0.0.1",
+  "authors": [
+    "yangyiming <529710127@qq.com>"
+  ],
+  "description": "you can fix the div in anywhere",
+  "homepage": "https://github.com/yangyiming/toolbarFix.git",
+  "main": "dist/toolbarFix.js,dist/toolbarFix.min.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+     "src",
+      "dist",
+      "example",
+      "Gruntfile.js",
+      "package.json"
+  ],
+  "dependencies": {
+    "jquery": ">=2.0.0"
+  }
+}
