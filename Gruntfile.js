@@ -5,15 +5,24 @@ module.exports = function(grunt) {
         options: {
             banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
         },
-        fixed: {
-            src: 'toolbarFix.js',
-            dest: 'toolbarFix.min.js'
+        dist: {
+            src: 'src/toolbarFix.js',
+            dest: 'dist/toolbarFix.min.js'
         }
-    }
+    },
+      concat: {
+          options: {
+              banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+          },
+          dist: {
+              src: 'src/toolbarFix.js',
+              dest: 'dist/toolbarFix.js'
+          }
+      }
 
   });
    grunt.loadNpmTasks('grunt-contrib-uglify');
    grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', [ 'uglify:fixed']);
+  grunt.registerTask('default', [ 'uglify:dist','concat:dist']);
 };
