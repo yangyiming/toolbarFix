@@ -18,11 +18,18 @@ module.exports = function(grunt) {
               src: 'src/toolbarFix.js',
               dest: 'dist/toolbarFix.js'
           }
+      },
+      'jsmin-sourcemap': {
+          all: {
+              src: ['dist/toolbarFix.js'],
+              dest: 'dist/toolbarFix.min.js',
+              destMap: 'dist/toolbarFix.js.map'
+          }
       }
 
   });
    grunt.loadNpmTasks('grunt-contrib-uglify');
    grunt.loadNpmTasks('grunt-contrib-concat');
-
-  grunt.registerTask('default', [ 'uglify:dist','concat:dist']);
+    grunt.loadNpmTasks('grunt-jsmin-sourcemap');
+  grunt.registerTask('default', [ 'uglify:dist','concat:dist','jsmin-sourcemap']);
 };
