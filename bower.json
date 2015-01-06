@@ -6,7 +6,7 @@
   ],
   "description": "you can fix the div in anywhere",
   "homepage": "https://github.com/yangyiming/toolbarFix.git",
-  "main": "dist/toolbarFix.js,dist/toolbarFix.min.js",
+  "main": ["dist/toolbarFix.js","dist/toolbarFix.min.js"],
   "license": "MIT",
   "private": true,
   "ignore": [
