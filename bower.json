@@ -18,7 +18,8 @@
       "example",
       "Gruntfile.js",
       "README.textile",
-      "package.json"
+      "package.json",
+      ".bowerrc"
   ],
   "dependencies": {
     "jquery": ">=2.0.0"
