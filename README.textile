@@ -40,3 +40,9 @@ $("#toolbar").fixed({
     activeClass:"active" //active class
 })
 </pre>
+
+h2. bower install
+
+<pre>
+    bower install toolbar-fix
+</pre>
