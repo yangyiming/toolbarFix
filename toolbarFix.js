@@ -10,7 +10,23 @@
  */
 
 
-(function(){
+
+
+(function (plugin, window) {
+    var factory = function(){
+        return plugin(window);
+    }
+    if ( typeof define === 'function' && define.amd ) {
+        // AMD. Register as an anonymous module.
+        define(factory);
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS style for Browserify
+        module.exports = factory;
+    } else {
+        // Browser globals
+        factory();
+    }
+}(function(window){
     var defaults = {
         position:100, //配置滚动条滚动到的极限值 对该目标进行fixed
         offset:0, //对已经定位的元素 相对于顶部 初始一个偏移值
@@ -30,14 +46,13 @@
         return Plugin;
     })();
     Plugin.prototype.init = function(){
-
         var that = this;
         this.position = this.options.position;
         this.offset = this.options.offset;
         this.selector = this.options.selector;
         this.menuItems = this.options.selector === "a" ? $(this.element) .find('li a') : $(this.element).find('li'), // Navigation lists or links
 
-        this.eventHandle();
+            this.eventHandle();
     }
     Plugin.prototype.eventHandle = function(){
         var that = this;
@@ -68,7 +83,7 @@
         that.menuItems.removeClass(that.options.activeClass);
         $(that.options.section).each(function () {
             var top = $(this).offset().top - $(that.element).height();
-                bottom = $(this).outerHeight(true) + top;
+            bottom = $(this).outerHeight(true) + top;
             if ((scrollTop >= top) && (scrollTop <= bottom)) {
                 if ( that.selector === "a") {
                     $(that.element).find('li a[href~="#' + this.id + '"]').addClass(that.options.activeClass);
@@ -92,4 +107,4 @@
         });
     };
 
-})()
+},this));
