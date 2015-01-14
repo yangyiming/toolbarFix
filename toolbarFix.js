@@ -47,7 +47,9 @@
     })();
     Plugin.prototype.init = function(){
         var that = this;
+        var scrollTop = $("body").scrollTop();
         this.position = this.options.position;
+        this.top = $(this.element).offset().top - scrollTop;
         this.offset = this.options.offset;
         this.selector = this.options.selector;
         this.menuItems = this.options.selector === "a" ? $(this.element) .find('li a') : $(this.element).find('li'), // Navigation lists or links
@@ -58,7 +60,7 @@
         var that = this;
         $(window).bind("scroll",function(){
             var scrollTop = $(this).scrollTop();
-            if(scrollTop >= that.position){
+            if(scrollTop >= that.top || scrollTop >= that.position){
                 $(that.element).addClass("fixed");
                 that.targetFixed(that.element);
             } else {
@@ -94,7 +96,7 @@
         });
     }
     Plugin.prototype.addTargetTop = function(element,value){
-        var topValue = this.position - value;
+        var topValue = this.top - value;
         $(element).css({
             top:topValue
         })
